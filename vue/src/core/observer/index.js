@@ -34,7 +34,8 @@ export function toggleObserving (value: boolean) {
  * object's property keys into getter/setters that
  * collect dependencies and dispatch updates.
  */
-export class Observer {
+// 创建观察者的类，把对象或者数组都变成可以观察的
+ export class Observer {
   value: any;
   dep: Dep;
   vmCount: number; // number of vms that has this object as root $data
@@ -131,6 +132,7 @@ export function observe (value: any, asRootData: ?boolean): Observer | void {
 /**
  * Define a reactive property on an Object.
  */
+// 使得对象发生改变可以被检测到
 export function defineReactive (
   obj: Object,
   key: string,
@@ -139,8 +141,9 @@ export function defineReactive (
   shallow?: boolean
 ) {
   const dep = new Dep()
-
+  // 返回某个对象属性的描述对象
   const property = Object.getOwnPropertyDescriptor(obj, key)
+  // configurable 当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为true。
   if (property && property.configurable === false) {
     return
   }
