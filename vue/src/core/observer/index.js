@@ -5,7 +5,7 @@ import VNode from '../vdom/vnode'
 import { arrayMethods } from './array'
 import {
   def,// 对象属性拦截方法，lang.js
-  warn,
+  warn,// debug.js 
   hasOwn,
   hasProto,
   isObject,
