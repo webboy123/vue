@@ -4,7 +4,7 @@
  */
 
 import { def } from '../util/index'
-
+// 获取array的原型
 const arrayProto = Array.prototype
 export const arrayMethods = Object.create(arrayProto)
 
