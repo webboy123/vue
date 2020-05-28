@@ -34,8 +34,8 @@ export function toggleObserving (value: boolean) {
  * object's property keys into getter/setters that
  * collect dependencies and dispatch updates.
  */
-// 创建观察者的类，把对象或者数组都变成可以观察的
- export class Observer {
+ // 定义一个类，将对象和数组变成可观测的
+export class Observer {
   value: any;
   dep: Dep;
   vmCount: number; // number of vms that has this object as root $data
