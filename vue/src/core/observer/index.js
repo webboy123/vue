@@ -4,7 +4,7 @@ import Dep from './dep'
 import VNode from '../vdom/vnode'
 import { arrayMethods } from './array'
 import {
-  def,
+  def,// 对象属性拦截方法，lang.js
   warn,
   hasOwn,
   hasProto,
